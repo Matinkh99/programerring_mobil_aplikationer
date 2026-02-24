@@ -177,7 +177,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   player: {fileID: 0}
-  enemyPrefab: {fileID: 7142808013859231071, guid: c7a2d6403ed2a7944b6e06ffafc8400e, type: 3}
+  enemyPrefab:
+  - {fileID: 7142808013859231071, guid: c7a2d6403ed2a7944b6e06ffafc8400e, type: 3}
+  - {fileID: 7142808013859231071, guid: eab3c2e35b668874fb307d701625e224, type: 3}
+  - {fileID: 7142808013859231071, guid: 08141a0a2e8d1de4cb6b2a3ed52b5d19, type: 3}
   spawnRate: 1
   scoreText: {fileID: 2140767393}
 --- !u!1 &444657393
@@ -451,6 +454,7 @@ GameObject:
   m_IsActive: 1
 --- !u!212 &1128587987
 SpriteRenderer:
+  serializedVersion: 2
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -496,6 +500,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: abb1c235c3160ba4fb2f2c7483e50a59, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -505,7 +510,6 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1128587988
 Transform:
@@ -719,6 +723,7 @@ BoxCollider2D:
   m_EdgeRadius: 0
 --- !u!212 &1531040458
 SpriteRenderer:
+  serializedVersion: 2
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -764,6 +769,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
+  m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: 35145770eccb29c4f84b313feca9b9ec, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -773,7 +779,6 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1531040459
 Transform:
@@ -1011,6 +1016,7 @@ MonoBehaviour:
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
