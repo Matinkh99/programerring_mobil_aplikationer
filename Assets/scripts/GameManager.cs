@@ -22,7 +22,7 @@ public class GameManager : MonoBehaviour
             gameStarted = true;
         }
     }
-   public GameObject enemyPrefab;
+   public GameObject[] enemyPrefab;
    [SerializeField] float spawnRate;
    bool gameStarted = false;
    int score = 0;
@@ -34,7 +34,8 @@ public class GameManager : MonoBehaviour
         float randomX = Random.Range(0f , 1f);
          Vector2 viewportPos = new Vector2(randomX , 1f );
          Vector2 worldPos = Camera.main.ViewportToWorldPoint(viewportPos);
-         Instantiate(enemyPrefab , worldPos , Quaternion.identity);
+         int randomNumber = Random.Range(0, enemyPrefab.Length);
+         Instantiate(enemyPrefab[randomNumber] , worldPos , Quaternion.identity);
          score++;
          updateText(score);
     }
