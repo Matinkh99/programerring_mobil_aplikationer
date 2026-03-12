@@ -130,6 +130,7 @@ GameObject:
   - component: {fileID: 118521200}
   - component: {fileID: 118521199}
   - component: {fileID: 118521201}
+  - component: {fileID: 118521202}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -183,6 +184,19 @@ MonoBehaviour:
   - {fileID: 7142808013859231071, guid: 08141a0a2e8d1de4cb6b2a3ed52b5d19, type: 3}
   spawnRate: 1
   scoreText: {fileID: 2140767393}
+--- !u!114 &118521202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 118521198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7402cd380c978d245be860df8aefdb38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Changecolor
+  character: {fileID: 1531040455}
 --- !u!1 &444657393
 GameObject:
   m_ObjectHideFlags: 0
@@ -641,6 +655,7 @@ GameObject:
   - component: {fileID: 1531040457}
   - component: {fileID: 1531040456}
   - component: {fileID: 1531040460}
+  - component: {fileID: 1531040461}
   m_Layer: 0
   m_Name: extra_character_a
   m_TagString: Untagged
@@ -811,6 +826,20 @@ MonoBehaviour:
   startingScore: 0
   moveSpeed: 5
   inputsys: {fileID: 118521199}
+--- !u!114 &1531040461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1531040455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4eaf0e342f532f342957519fcfc5d0c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Doubletap
+  extra_character_a: {fileID: 1531040455}
+  maxTapDelay: 5
 --- !u!1 &1972182051
 GameObject:
   m_ObjectHideFlags: 0
