@@ -1,42 +1,63 @@
 using UnityEngine;
-using UnityEngine.InputSystem;
-using gyro = UnityEngine.InputSystem.Gyroscope;
 
-public class Sensors_Gyroscope : MonoBehaviour
+public class GyroController : MonoBehaviour
 {
+    private Gyroscope gyro;
+    private Quaternion calibration;
+    private Quaternion smoothRotation;
 
-    public float rotationSpeed = 50f;
-    public GameObject extra_character_a;
-    
+    [Header("Settings")]
+    public float smoothSpeed = 5f;
+    public float maxTilt = 30f; // limit movement
 
-   
+    void Start()
+    {
+        if (SystemInfo.supportsGyroscope)
+        {
+            gyro = Input.gyro;
+            gyro.enabled = true;
 
-
+            Calibrate();
+        }
+        else
+        {
+            Debug.LogWarning("Gyroscope not supported");
+        }
+    }
 
     void Update()
     {
-        if (gyro.current != null)
-            InputSystem.EnableDevice(gyro.current);
-        if (gyro.current != null)
-        {
-            Vector3 rotationRate = gyro.current.angularVelocity.ReadValue();
+        if (gyro == null) return;
 
-            Debug.Log("Rotation Rate: " + rotationRate);
+        Quaternion raw = gyro.attitude;
 
+        // Fix coordinate system (Unity vs phone)
+        Quaternion fixedRotation = new Quaternion(raw.x, raw.y, -raw.z, -raw.w);
 
-            
+        // Apply calibration offset
+        Quaternion targetRotation = calibration * fixedRotation;
 
+        // Smooth it
+        smoothRotation = Quaternion.Slerp(smoothRotation, targetRotation, Time.deltaTime * smoothSpeed);
 
-            Vector3 rotationDegrees = rotationRate * Mathf.Rad2Deg;
+        // Clamp rotation
+        Vector3 euler = smoothRotation.eulerAngles;
+        euler.x = ClampAngle(euler.x, -maxTilt, maxTilt);
+        euler.y = ClampAngle(euler.y, -maxTilt, maxTilt);
+        euler.z = 0;
 
+        transform.rotation = Quaternion.Euler(euler);
+    }
 
-            extra_character_a.transform.Rotate(0f, 0f, -rotationDegrees.z * rotationSpeed * Time.deltaTime);
+    void Calibrate()
+    {
+        calibration = Quaternion.Inverse(Input.gyro.attitude);
+        smoothRotation = Quaternion.identity;
+    }
 
-
-            extra_character_a.transform.Translate(rotationDegrees.x, rotationDegrees.y, 0f * Time.deltaTime);
-
-
-        }
+    float ClampAngle(float angle, float min, float max)
+    {
+        if (angle > 180) angle -= 360;
+        return Mathf.Clamp(angle, min, max);
     }
 }
-
