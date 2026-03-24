@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class GyroController : MonoBehaviour
 {
-    private Gyroscope gyro;
+    public Gyroscope gyro;
     private Quaternion calibration;
     private Quaternion smoothRotation;
 
