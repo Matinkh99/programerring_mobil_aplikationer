@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 118521201}
   - component: {fileID: 118521202}
   - component: {fileID: 118521204}
-  - component: {fileID: 118521206}
+  - component: {fileID: 118521203}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -179,7 +179,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3dfe94bbcb6e71e45a94e7006e244e13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
-  player: {fileID: 0}
+  player: {fileID: 1531040460}
   enemyPrefab:
   - {fileID: 7142808013859231071, guid: c7a2d6403ed2a7944b6e06ffafc8400e, type: 3}
   - {fileID: 7142808013859231071, guid: eab3c2e35b668874fb307d701625e224, type: 3}
@@ -199,19 +199,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Changecolor
   character: {fileID: 1531040455}
---- !u!114 &118521204
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 118521198}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2c2db4ba563be14eac27b94fc525fda, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Sensors_Accelerometer
---- !u!114 &118521206
+--- !u!114 &118521203
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -224,6 +212,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Sensors_Additional
   sensorText: {fileID: 1789606357}
+--- !u!114 &118521204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 118521198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2c2db4ba563be14eac27b94fc525fda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Sensors_Accelerometer
 --- !u!1 &444657393
 GameObject:
   m_ObjectHideFlags: 0
@@ -686,6 +686,8 @@ GameObject:
   - component: {fileID: 1531040461}
   - component: {fileID: 1531040462}
   - component: {fileID: 1531040463}
+  - component: {fileID: 1531040465}
+  - component: {fileID: 1531040464}
   m_Layer: 0
   m_Name: extra_character_a
   m_TagString: Untagged
@@ -896,6 +898,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GyroController
   smoothSpeed: 5
   maxTilt: 30
+--- !u!114 &1531040464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1531040455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6ac49d5ad1b370448e24ad7f7a13ac9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Sensors_Additional
+  sensorText: {fileID: 1789606357}
+--- !u!114 &1531040465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1531040455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2c2db4ba563be14eac27b94fc525fda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Sensors_Accelerometer
 --- !u!1 &1789606355
 GameObject:
   m_ObjectHideFlags: 0
