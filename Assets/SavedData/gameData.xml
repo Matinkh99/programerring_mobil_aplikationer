@@ -2,10 +2,28 @@
 <GameData xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <entries>
     <PlayerData>
-      <time>2.50253987</time>
-      <posX>-1.670999</posX>
+      <time>2.1289978</time>
+      <posX>-0.460278749</posX>
       <posY>0</posY>
       <score>1</score>
+    </PlayerData>
+    <PlayerData>
+      <time>3.348058</time>
+      <posX>-2.1729486</posX>
+      <posY>0</posY>
+      <score>2</score>
+    </PlayerData>
+    <PlayerData>
+      <time>4.359684</time>
+      <posX>1.82636309</posX>
+      <posY>0</posY>
+      <score>3</score>
+    </PlayerData>
+    <PlayerData>
+      <time>5.412776</time>
+      <posX>1.89232945</posX>
+      <posY>0</posY>
+      <score>4</score>
     </PlayerData>
   </entries>
 </GameData>
