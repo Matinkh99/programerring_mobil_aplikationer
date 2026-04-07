@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<GameData xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <entries>
+    <PlayerData>
+      <time>2.50253987</time>
+      <posX>-1.670999</posX>
+      <posY>0</posY>
+      <score>1</score>
+    </PlayerData>
+  </entries>
+</GameData>
